@@ -1,0 +1,43 @@
+//Task 1 Create a Department Structure:
+
+const company = {
+    departments: [
+         {
+            departmentName: 'Human Resource',
+            employees: [
+                 {
+                    name: 'Sadman',
+                    salary: 100000,
+                    subordinates: [
+                         {
+                            name: 'Raiyan',
+                            salary: 80000,
+                            subordinates: [
+                                {
+                                    name: 'Nayeem',
+                                    salary: 60000,
+                                    subordinates: []
+                                }]}]},
+                    {
+                        name: 'Ashim',
+                        salary: 90000,
+                        subordinates: []
+                     }]},
+                {
+                    departmentName: 'Information Technology',
+                    employees: [
+                        {
+                            name: 'Sreela',
+                            salary: 85000,
+                            subordinates: [
+                                {
+                                    name: 'Shrabasty',
+                                    salary: 70000,
+                                    subordinates: []
+                                }]},
+                                {
+                                    name: 'Tazrin',
+                                    salary: 95000,
+                                    subordinates: []
+                                }]}]};
+                                
