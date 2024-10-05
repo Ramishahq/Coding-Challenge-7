@@ -42,7 +42,7 @@ const RHCompany = {
                                 }]}]};
 
 //Task 2 Create a Recursive Function to Calculate Total Salary for a Department:
-// Function to recursively calculate total sales of an employee and their subordinates
+// Function to recursively calculate total department sales of an employee and their subordinates
 
 function calculateDepartmentSalary(departmentEmployees) {
 let totalDepartmentSalary = 0;
@@ -62,3 +62,18 @@ totalDepartmentSalary += employee.salary;
     console.log(`Total Salary for the Human Resource department: $${DepartmentSalary}`)
 
 // output Total Salary for the Human Resource department: $330000
+
+// Task 3 Create a Function to Calculate the Total Salary for All Departments
+//Task 3- Create a Function to Calculate the Total Salary for all Departments
+function calculateCompanySalary(company) {
+    let totalCompanySalary = 0;
+
+    company.departments.forEach(department => {
+        totalCompanySalary += calculateDepartmentSalary(department.employees);
+    });
+    return totalCompanySalary;
+}
+
+console.log(`Total Salary for RHCompany: $${calculateCompanySalary(RHCompany)}`); 
+
+//Out put Total Salary for RHCompany: $580000
